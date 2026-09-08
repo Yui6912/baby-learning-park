@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#FF8FB1">
+<meta name="description" content="宝贝学习乐园 - 专为4岁宝宝设计的互动学习工作台，字母、古诗、数字、逻辑、闯关五大模块">
+<title>宝贝学习乐园</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌈</text></svg>">
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<div class="bg-bubbles" aria-hidden="true">
+  <span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<div class="app" id="app">
+
+  <!-- ============ 侧边栏（PC 端） ============ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-logo">🌈</div>
+      <div class="brand-text">
+        <div class="brand-title">宝贝学习乐园</div>
+        <div class="brand-sub">快乐学习每一天</div>
+      </div>
+    </div>
+
+    <nav class="side-nav" id="sideNav">
+      <button class="side-item" data-view="home"><span class="side-ico">🏠</span><span class="side-txt">首页</span></button>
+      <button class="side-item" data-view="letters"><span class="side-ico">🔤</span><span class="side-txt">字母乐园</span></button>
+      <button class="side-item" data-view="poems"><span class="side-ico">🌸</span><span class="side-txt">古诗花园</span></button>
+      <button class="side-item" data-view="numbers"><span class="side-ico">🔢</span><span class="side-txt">数字王国</span></button>
+      <button class="side-item" data-view="logic"><span class="side-ico">🧩</span><span class="side-txt">逻辑挑战</span></button>
+      <button class="side-item" data-view="adventure"><span class="side-ico">🚀</span><span class="side-txt">闯关冒险</span></button>
+    </nav>
+
+    <div class="side-star">
+      <div class="side-star-ico">⭐</div>
+      <div>
+        <div class="side-star-num" id="sideStarNum">0</div>
+        <div class="side-star-lbl">我的星星</div>
+      </div>
+    </div>
+    <button class="side-reset" id="btnReset">重新开始</button>
+  </aside>
+
+  <!-- ============ 主内容区 ============ -->
+  <main class="main">
+    <header class="topbar">
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="菜单">☰</button>
+      <h1 class="topbar-title" id="topbarTitle">宝贝学习乐园</h1>
+      <div class="star-chip" title="我的星星">
+        <span class="star-chip-ico">⭐</span>
+        <span id="starCount">0</span>
+      </div>
+    </header>
+
+    <div class="views">
+
+      <!-- 首页 -->
+      <section class="view is-active" id="view-home">
+        <div class="hero">
+          <div class="hero-emoji">🧸</div>
+          <div class="hero-text">
+            <h2>欢迎回来，小宝贝！</h2>
+            <p>今天想学点什么呢？选一个乐园开始吧～</p>
+          </div>
+        </div>
+
+        <div class="module-grid" id="homeGrid"></div>
+
+        <div class="panel">
+          <div class="panel-head"><h3>🏅 我的成就徽章</h3><button class="btn btn-mini btn-purple" data-goto="adventure">查看全部</button></div>
+          <div class="badge-strip" id="homeBadges"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><h3>📊 学习进度</h3></div>
+          <div class="stat-grid" id="homeStats"></div>
+        </div>
+      </section>
+
+      <!-- 字母乐园 -->
+      <section class="view" id="view-letters">
+        <div class="seg" id="lettersSeg">
+          <button class="seg-btn is-active" data-tab="cards">字母卡片</button>
+          <button class="seg-btn" data-tab="match">配对游戏</button>
+        </div>
+        <div id="lettersBody"></div>
+      </section>
+
+      <!-- 古诗花园 -->
+      <section class="view" id="view-poems">
+        <div class="seg" id="poemsSeg">
+          <button class="seg-btn is-active" data-tab="list">古诗列表</button>
+          <button class="seg-btn" data-tab="detail">正在学习</button>
+        </div>
+        <div id="poemsBody"></div>
+      </section>
+
+      <!-- 数字王国 -->
+      <section class="view" id="view-numbers">
+        <div class="seg" id="numbersSeg">
+          <button class="seg-btn is-active" data-tab="know">数字认知</button>
+          <button class="seg-btn" data-tab="calc">加减法</button>
+          <button class="seg-btn" data-tab="count">数数游戏</button>
+        </div>
+        <div id="numbersBody"></div>
+      </section>
+
+      <!-- 逻辑挑战 -->
+      <section class="view" id="view-logic">
+        <div id="logicBody"></div>
+      </section>
+
+      <!-- 闯关冒险 -->
+      <section class="view" id="view-adventure">
+        <div class="seg" id="advSeg">
+          <button class="seg-btn is-active" data-tab="levels">闯关地图</button>
+          <button class="seg-btn" data-tab="badges">徽章墙</button>
+        </div>
+        <div id="advBody"></div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ============ 底部 Tab（移动端） ============ -->
+  <nav class="tabbar" id="tabbar">
+    <button class="tab-item is-active" data-view="home"><span class="tab-ico">🏠</span><span class="tab-txt">首页</span></button>
+    <button class="tab-item" data-view="letters"><span class="tab-ico">🔤</span><span class="tab-txt">字母</span></button>
+    <button class="tab-item" data-view="poems"><span class="tab-ico">🌸</span><span class="tab-txt">古诗</span></button>
+    <button class="tab-item" data-view="numbers"><span class="tab-ico">🔢</span><span class="tab-txt">数字</span></button>
+    <button class="tab-item" data-view="logic"><span class="tab-ico">🧩</span><span class="tab-txt">逻辑</span></button>
+    <button class="tab-item" data-view="adventure"><span class="tab-ico">🚀</span><span class="tab-txt">闯关</span></button>
+  </nav>
+
+</div>
+
+<div class="toast" id="toast"></div>
+<div class="fx-layer" id="fxLayer"></div>
+
+<!-- 弹窗 -->
+<div class="modal-mask" id="modalMask">
+  <div class="modal">
+    <div class="modal-emoji" id="modalEmoji">🎉</div>
+    <h3 class="modal-title" id="modalTitle">太棒了！</h3>
+    <p class="modal-text" id="modalText"></p>
+    <div class="modal-btns" id="modalBtns"></div>
+  </div>
+</div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/letters.js"></script>
+<script src="assets/js/poems.js"></script>
+<script src="assets/js/numbers.js"></script>
+<script src="assets/js/logic.js"></script>
+<script src="assets/js/adventure.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
