@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>README 本地预览 · 宝贝学习乐园</title>
+<style>
+  :root { --ink:#2a2d3a; --muted:#6e7185; --line:#e8e4ef; --pink:#ff8fb1; --purple:#b49cf7; --blue:#6bcfe3; }
+  *{box-sizing:border-box}
+  body{margin:0;background:#fff;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.65}
+  .wrap{width:min(100% - 36px,1120px);margin:0 auto;padding:40px 0 72px}
+  .meta{display:flex;justify-content:space-between;align-items:center;padding-bottom:18px;margin-bottom:24px;border-bottom:1px solid var(--line);color:var(--muted);font-size:13px}
+  .meta b{color:var(--ink)}
+  .hero{margin-bottom:18px}
+  .hero img,.showcase{width:100%;display:block}
+  .links{text-align:center;margin:14px 0 30px;color:var(--muted)}
+  .links a{color:#cc4771;font-weight:700;text-decoration:none}
+  .links a+a{margin-left:18px}
+  .badges{text-align:center;margin:14px 0 34px}
+  .badges span{display:inline-block;margin:4px;padding:4px 9px;border-radius:6px;background:#f3f1f7;color:#5d6072;font-size:12px}
+  h1{font-size:34px;line-height:1.25;margin:30px 0 12px}
+  h2{font-size:25px;margin:38px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+  h3{font-size:20px;margin:24px 0 8px}
+  p{color:#46495a;margin:9px 0}
+  table{width:100%;border-collapse:collapse;margin:14px 0 22px;font-size:15px}
+  th,td{text-align:left;padding:11px 13px;border:1px solid var(--line);vertical-align:top}
+  th{background:#fff5f8}
+  ul{padding-left:24px;color:#46495a}
+  li{margin:5px 0}
+  code{padding:2px 5px;border-radius:5px;background:#f3f1f7;font-size:.92em}
+  pre{overflow:auto;padding:16px;border-radius:12px;background:#252735;color:#f6f3ff;line-height:1.55}
+  pre code{padding:0;background:none;color:inherit}
+  blockquote{margin:15px 0;padding:10px 16px;border-left:4px solid var(--purple);background:#faf8ff;color:var(--muted)}
+  .note{padding:16px 18px;border-radius:14px;background:linear-gradient(135deg,#fff4f8,#f5f0ff);border:1px solid #eee6f6;margin:24px 0}
+  .foot{text-align:center;color:#8a8da0;font-size:13px;margin-top:44px}
+  @media(max-width:640px){.wrap{width:min(100% - 20px,1120px);padding-top:18px}.meta{font-size:12px}.meta span{display:none}h1{font-size:27px}h2{font-size:22px}table{font-size:13px}th,td{padding:8px}.showcase{min-height:0}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="meta"><b>README.md · 本地预览</b><span>仅本地预览，不会推送到远程仓库</span></div>
+  <section class="hero"><img src="./assets/readme/hero.svg" alt="宝贝学习乐园：面向 4 岁宝宝的五大模块互动学习工作台"></section>
+  <div class="links"><a href="https://241abc376318490aa77a3d39f5459281.sg2.agentos-app.run">在线体验</a><a href="#quick-start">本地运行</a><a href="https://github.com/Yui6912/baby-learning-park/issues">反馈问题</a></div>
+  <div class="badges"><span>HTML/CSS/JS · 零依赖</span><span>适龄 · 4 岁宝宝</span><span>模块 · 5 大乐园</span><span>关卡 · 10 关</span></div>
+
+  <h1>宝贝学习乐园</h1>
+  <p>给 4 岁宝宝准备的一间彩虹色互动学习工作台：点一点会说话，答对题目拿星星，学会内容就点亮徽章。整个项目是纯静态 HTML / CSS / JavaScript，打开浏览器即可玩，不需要安装依赖或后端服务。</p>
+
+  <h2>先看它长什么样</h2>
+  <img class="showcase" src="./assets/readme/showcase.png" alt="真实界面展示：首页、字母、古诗、数字、逻辑、闯关和移动端界面">
+
+  <h2>里面有什么</h2>
+  <table><thead><tr><th>乐园</th><th>可以做什么</th></tr></thead><tbody>
+    <tr><td><b>字母乐园</b></td><td>认识 26 个大小写字母，查看单词与中文含义，听英文发音，玩大小写配对</td></tr>
+    <tr><td><b>古诗花园</b></td><td>学习 8 首经典古诗，逐字显示拼音，支持整首朗读与逐句朗读</td></tr>
+    <tr><td><b>数字王国</b></td><td>认识 0–20，练习 10 以内加减法，完成数数游戏</td></tr>
+    <tr><td><b>逻辑挑战</b></td><td>在找规律、图形配对、排排序、找不同 4 种题型中训练观察与推理</td></tr>
+    <tr><td><b>闯关冒险</b></td><td>10 个综合关卡，每关 5 题，答对 3 题过关，按表现获得 1–3 颗星</td></tr>
+    <tr><td><b>徽章墙</b></td><td>收集 12 枚成就徽章，从「初出茅庐」一路解锁到「全能宝贝」</td></tr>
+  </tbody></table>
+
+  <h2>为什么适合小朋友</h2>
+  <ul><li><b>点一点就有反馈：</b>按钮、卡片和答题都有明确的视觉反馈，答对会掉星星特效。</li><li><b>听、看、玩结合：</b>字母和古诗都支持 Web Speech API 朗读；每个知识点都用卡片或小题呈现。</li><li><b>进度看得见：</b>星星、徽章、已认识字母、已学古诗、闯关进度都会保存在浏览器里。</li><li><b>手机也能玩：</b>桌面端使用侧边栏，移动端切换为底部 Tab 导航；交互按钮按触控尺寸设计。</li></ul>
+
+  <h2 id="quick-start">快速开始</h2>
+  <h3>方式一：直接打开</h3><p>下载或克隆仓库后，双击 <code>index.html</code> 即可启动。项目没有构建步骤，也没有 <code>npm install</code>。</p>
+  <h3>方式二：启动本地静态服务</h3>
+  <pre><code>git clone https://github.com/Yui6912/baby-learning-park.git
+cd baby-learning-park
+python3 -m http.server 8124</code></pre>
+  <p>然后打开 <a href="http://127.0.0.1:8124">http://127.0.0.1:8124</a>。</p>
+  <blockquote>如果希望局域网内用手机访问，把 127.0.0.1 换成电脑的局域网 IP，并确认防火墙允许该端口。</blockquote>
+
+  <h2>技术细节</h2>
+  <ul><li><b>前端：</b>原生 HTML / CSS / JavaScript，零第三方运行时依赖。</li><li><b>状态：</b><code>localStorage</code> 持久化，键名为 <code>baby_learn_park_v1</code>。</li><li><b>朗读：</b>Web Speech API；中文使用 <code>zh-CN</code>，字母使用 <code>en-US</code>。</li><li><b>数据：</b>26 个字母、8 首古诗、21 张数字卡片、4 种逻辑题型、10 个闯关关卡、12 枚徽章。</li></ul>
+
+  <h2>浏览器支持与限制</h2>
+  <ul><li>推荐使用最新版 Chrome、Edge 或 Safari。</li><li>朗读功能依赖浏览器的 Web Speech API；如果浏览器不支持，其他学习与闯关功能仍可使用。</li><li>学习进度只保存在当前浏览器的 <code>localStorage</code> 中，清理站点数据会同时清空星星、徽章与关卡进度。</li><li>这是面向家庭使用的轻量学习玩具，不替代系统的幼儿教育课程。</li></ul>
+
+  <h2>About 区建议文案</h2>
+  <div class="note"><p><b>简介：</b>给 4 岁宝宝的零依赖互动学习乐园：字母、古诗、数字、逻辑、闯关与徽章收集，支持朗读和移动端。</p><p><b>Website：</b><a href="https://241abc376318490aa77a3d39f5459281.sg2.agentos-app.run">在线体验链接</a></p><p><b>Topics：</b>children-learning · preschool · education · interactive-learning · html · css · javascript · zero-dependency · chinese-learning · web-app</p></div>
+  <p>About 区的修改命令已经写进 README，但尚未执行；本地预览和远程仓库保持分离。</p>
+  <p class="foot">一个给小朋友的彩虹色学习角落 🌈</p>
+</main>
+</body>
+</html>
